@@ -60,3 +60,36 @@ from the GitHub account:
 - Location / Language (preferably from same country or region)
 
 ![Mockup](screenshot.png)
+
+## Project search
+
+Users can search for a project by providing
+- technology (e.g. "Django", "Rails", "Meteor", "Node")
+- programming language (e.g. "python", "Ruby", "JavaScript")
+- project name (e.g. "chromium")
+- project owner (e.g. "lukasmartinelli")
+- project description (e.g. "ast parser")
+
+## Project
+
+GitHub data:
+
+- Project name
+- Repository link
+- Description
+- Languages / Technologies used
+- Code statistics (SLOC, language percentage)
+
+Additional data:
+
+- What is expected from the review
+- Desired form of review
+
+## Reviewer
+
+- Projects reviewed by reviewer
+- Qualifiers extracted from GitHub Profile
+- Projects submitted for review
+
+> Idea: Show interactions (reviews and requests) between
+  developers and projects in a graph like view
