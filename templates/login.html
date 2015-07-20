@@ -1,3 +1,5 @@
+{% extends "base.html" %}
+
 {% if user and not user.is_anonymous %}
   <a>Hello, {{ user.get_full_name }}!</a>
   <br>
@@ -5,3 +7,29 @@
 {% else %}
   <a href="{% url 'social:begin' 'github' %}?next={{ request.path }}">Login with GitHub</a>
 {% endif %}
+
+<h1>Page Heading</h1>
+    
+<p>Use the HTML5 <code>main</code> element to wrap the central content of your page.</p>
+
+<h2>Page sub-heading</h2>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam aliquam, sem vitae tincidunt lobortis, nibh tellus faucibus elit, sed imperdiet enim mauris eget felis. Donec a varius sapien, at mattis nunc.</p>
+
+<h2>Sub-heading</h2>
+
+<ul>
+  <li>List item</li>
+  <li>List item</li>
+  <li>List item</li>
+  <li>List item</li>
+</ul>
+
+<h2>Sub-heading</h2>
+
+<ol>
+  <li>List item</li>
+  <li>List item</li>
+  <li>List item</li>
+  <li>List item</li>
+</ol>

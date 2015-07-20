@@ -110,6 +110,10 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, "static"),
+)
+
 SOCIAL_AUTH_GITHUB_KEY = os.getenv('GITHUB_KEY')
 SOCIAL_AUTH_GITHUB_SECRET = os.getenv('GITHUB_SECRET')
 
