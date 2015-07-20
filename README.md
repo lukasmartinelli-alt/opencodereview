@@ -19,6 +19,8 @@ The principle of "Give and Take" is similar to
 community organizes itself. People who submit a project
 for a review should be willing to review projects themselves.
 
+The platform is not meant for finding reviewers for a pull request.
+
 ## Use Cases
 
 - Joe is a Pythonista but is creating a cool new project in Go
@@ -33,11 +35,12 @@ for a review should be willing to review projects themselves.
 
 Opensource reviews already happen today in various forms:
 
-- Security Audits (often payed)
+- Security Audits (often paid)
 - Blog posts (like http://ayende.com/blog/2976/code-review-petshop-3-0)
-- Pull requests
-- Issues
-- Per mail (if explicitely asked by someone else)
+- GitHub Pull requests
+- GitHub Issues
+- Mailing lists (https://groups.google.com/forum/#!forum/golang-codereviews)
+- Direct mail (if someone is explicitely asked for their opinion)
 
 The platform is independent from the form of the review, it is only the
 mediator. Reviewers can use any form they like.
