@@ -1,31 +1,46 @@
 # opencodereview
 
-A platform for finding code reviewers for your project.
+A platform for finding code reviewers for your GitHub project.
 
 Developers often work on their Open Source project and want
 input or a code review for their project.
 However finding a reviewer becomes tricky if you don't know
 the people personally.
 
-A platform where reviewable projects and reviewers find each
-other would solve that problem and improve the quality
-of Open Source projects.
+A platform where GitHub projects can be submitted for reviews
+and voluntary reviewers can find interesting projects
+would help improving the quality and visibility
+of many projects.
+
+The platform only works if there are enough reviewers.
+The principle of "Give and Take" is similar to
+[couchsurfing](https://www.couchsurfing.com/) or
+[warmshowers](https://www.warmshowers.org/) where the
+community organizes itself. People who submit a project
+for a review should be willing to review projects themselves.
 
 ## Use Cases
 
-- I work on a project in a new language (e.g. Go) and
-  want to ask someone what I could improve or whether
-  the code is idiomatic
-- I want input from people doing similar projects (e.g.)
-  Django
+- Joe is a Pythonista but is creating a cool new project in Go
+  with which he is unfamiliar with.
+  He would like someone with more expertise to take a look at his
+  project and tell him where he could write more idiomatic code
+  or whether he writes readable Go code.
+- Joe on his part reviews a Django (a technology he has created many cool
+  websites with) project and gives feedback about best practices.
 
 ## Opensource Reviews today
+
+Opensource reviews already happen today in various forms:
 
 - Security Audits (often payed)
 - Blog posts (like http://ayende.com/blog/2976/code-review-petshop-3-0)
 - Pull requests
 - Issues
 - Per mail (if explicitely asked by someone else)
+
+The platform is independent from the form of the review, it is only the
+mediator. Reviewers can use any form they like.
 
 ## Onboarding
 
@@ -41,13 +56,22 @@ the user worked on and create a profile
 - Location
 - Contact possibilities
 
+## Submit project
+
+The user chooses a repository from his GitHub account and
+describes what he expects from a review and in which form
+he would like the review.
+After that the platform takes over and constantly looks for
+reviewers that match the project profile.
+
 ## Mediating reviewers and projects
 
 The web application is only the mediator between
 the reviewer and the project. The review itself can happen
 anywhere (via GitHub issue, email or blog post).
-The only data about the review itself is provided via an URL
-to the review.
+
+The only data about the review itself is provided via an optional URL
+to the completed review.
 
 The platform tracks who reviewed what and provided which projects.
 
