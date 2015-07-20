@@ -5,21 +5,47 @@ A platform for finding code reviewers for your GitHub project.
 Developers often work on their Open Source project and want
 input or a code review for their project.
 However finding a reviewer becomes tricky if you don't know
-the people personally.
+the right people personally.
 
 A platform where GitHub projects can be submitted for reviews
 and voluntary reviewers can find interesting projects
 would help improving the quality and visibility
-of many projects.
+of many projects and boost social collaboration on GitHub.
+
+## Community
+
+> People who submit a project
+  for a review should be willing
+  to review projects themselves.
 
 The platform only works if there are enough reviewers.
 The principle of "Give and Take" is similar to
-[couchsurfing](https://www.couchsurfing.com/) or
-[warmshowers](https://www.warmshowers.org/) where the
-community organizes itself. People who submit a project
-for a review should be willing to review projects themselves.
+[Couchsurfing](https://www.couchsurfing.com/) or
+[Warm Showers](https://www.warmshowers.org/) where the
+community organizes itself.
 
-The platform is not meant for finding reviewers for a pull request.
+### Benefits
+
+Developer:
+- Feedback for project
+- Increased quality
+- Valuable learnings
+- More visibility of project
+
+Reviewer:
+- Dive into the source code of interesting projects
+- Chance for getting projects reviewed themselves
+- Valuable contribution to Open Source community
+
+Shared benefits:
+- More social collaboration on interesting projects
+- One place to ask and look for reviews
+
+### Distinctions
+
+- The platform is not meant for finding reviewers for a pull request.
+- The platform only works as a mediator between projects and reviewers,
+  reviews themselves happen elsewhere.
 
 ## Use Cases
 
@@ -41,9 +67,6 @@ Opensource reviews already happen today in various forms:
 - GitHub Issues
 - Mailing lists (https://groups.google.com/forum/#!forum/golang-codereviews)
 - Direct mail (if someone is explicitely asked for their opinion)
-
-The platform is independent from the form of the review, it is only the
-mediator. Reviewers can use any form they like.
 
 ## Onboarding
 
@@ -72,6 +95,7 @@ reviewers that match the project profile.
 The web application is only the mediator between
 the reviewer and the project. The review itself can happen
 anywhere (via GitHub issue, email or blog post).
+Reviewers can use any form they like.
 
 The only data about the review itself is provided via an optional URL
 to the completed review.
@@ -99,7 +123,7 @@ Users can search for a project by providing
 
 ## Project
 
-GitHub data:
+Most data for a project is already provided by GitHub:
 
 - Project name
 - Repository link
