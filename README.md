@@ -147,3 +147,17 @@ Additional data:
 
 > Idea: Show interactions (reviews and requests) between
   developers and projects in a graph like view
+
+## Data Model
+
+The goal is to have the simplest possible data model.
+User and repository are both resources of the GitHub API where
+we do not need any additional information as it can be requested
+from the API.
+
+A review is the entity for each review requested by a user.
+For simplicity's sake any user can request a review for any repository.
+This means a user or multiple users can request multiple reviews for the same project.
+A review however can only be completed by one reviewer for now!
+
+![Data model](model.png)
