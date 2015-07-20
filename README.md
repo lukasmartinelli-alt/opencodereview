@@ -41,7 +41,7 @@ Shared benefits:
 - More social collaboration on interesting projects
 - One place to ask and look for reviews
 
-### Distinctions
+**Distinctions:**
 
 - The platform is not meant for finding reviewers for a pull request.
 - The platform only works as a mediator between projects and reviewers,
@@ -49,22 +49,24 @@ Shared benefits:
 
 ## Use Cases
 
-- Joe is a Pythonista but is creating a cool new project in Go
+- Joe is a Pythonista but is creating a cool new project in
+  [Go](https://golang.org/)
   with which he is unfamiliar with.
   He would like someone with more expertise to take a look at his
   project and tell him where he could write more idiomatic code
   or whether he writes readable Go code.
-- Joe on his part reviews a Django (a technology he has created many cool
-  websites with) project and gives feedback about best practices.
+- Joe on his part reviews a [Django](https://www.djangoproject.com/)
+  project (with which he is very familar)
+  and gives feedback about best practices.
 
-## Opensource Reviews today
+## Open Reviews today
 
-Opensource reviews already happen today in various forms:
+Open Source reviews already happen today in various forms:
 
-- Security Audits (often paid)
+- GitHub pull requests
+- GitHub issues
+- Security audits (like https://www.eff.org/deeplinks/2011/09/open-source-security-auditing)
 - Blog posts (like http://ayende.com/blog/2976/code-review-petshop-3-0)
-- GitHub Pull requests
-- GitHub Issues
 - Mailing lists (https://groups.google.com/forum/#!forum/golang-codereviews)
 - Direct mail (if someone is explicitely asked for their opinion)
 
@@ -105,6 +107,7 @@ The platform tracks who reviewed what and provided which projects.
 The platform helps matching appropriate projects to
 appropriate viewers by looking at the qualifiers collected
 from the GitHub account:
+
 - Similarity in projects (many Django projects)
 - Expertise in Language (via published repositories)
 - Developers with more stars are usually more popular
