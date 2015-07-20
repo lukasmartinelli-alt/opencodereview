@@ -12,6 +12,8 @@ and voluntary reviewers can find interesting projects
 would help improving the quality and visibility
 of many projects and boost social collaboration on GitHub.
 
+![Mockup](screenshot.png)
+
 ## Community
 
 > People who submit a project
@@ -112,8 +114,6 @@ from the GitHub account:
 - Expertise in Language (via published repositories)
 - Developers with more stars are usually more popular
 - Location / Language (preferably from same country or region)
-
-![Mockup](screenshot.png)
 
 ## Project search
 
