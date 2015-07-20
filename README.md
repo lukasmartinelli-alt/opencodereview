@@ -161,3 +161,13 @@ This means a user or multiple users can request multiple reviews for the same pr
 A review however can only be completed by one reviewer for now!
 
 ![Data model](model.png)
+
+## Time estimation
+
+- Project setup **2h**
+- HTML Design **8h**
+- GitHub OAuth **2h**
+- Request review **4h**
+- Review project **2h**
+- User detail **2h**
+- Review detail **2h**
