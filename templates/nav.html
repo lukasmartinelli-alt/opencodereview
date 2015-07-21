@@ -17,7 +17,7 @@
                       <a href="{% url 'browse' %}">Browse</a>
                     </li>
                     <li>
-                        <a href="#services">Request Review+</a>
+                      <a href="{% url 'new' %}">Request Review+</a>
                     </li>
                     <li>
                         {% if user and not user.is_anonymous %}
