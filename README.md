@@ -150,15 +150,18 @@ Additional data:
 
 ## Data Model
 
-The goal is to have the simplest possible data model.
+The goal is to have the simplest possible data model that allows
+a lot of freedom for the reviewers and developers.
 User and repository are both resources of the GitHub API where
 we do not need any additional information as it can be requested
 from the API.
 
-A review is the entity for each review requested by a user.
+There can only be one **open** review for project at a time.
+Once a review is completed it is possible to request a new review.
 For simplicity's sake any user can request a review for any repository.
-This means a user or multiple users can request multiple reviews for the same project.
-A review however can only be completed by one reviewer for now!
+
+A review is assigned to only one reviewer. However if multiple
+reviewers are interested it is still possible.
 
 ![Data model](model.png)
 
