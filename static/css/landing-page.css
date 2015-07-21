@@ -168,3 +168,24 @@ footer {
 p.copyright {
     margin: 15px 0 0;
 }
+
+/*
+.open-review:hover {
+    cursor: pointer;
+}*/
+
+.open-review:hover > div {
+    background-color: #ddd;
+}
+
+.open-review {
+    border-top: 20px solid transparent;
+    border-right: 20px solid transparent;
+}
+.open-review > div {
+    background-color: #eee;
+}
+
+.btn, .input-lg {
+    border-radius: 0px;
+}

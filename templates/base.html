@@ -3,8 +3,8 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>Page Title</title>
-	<meta name="description" content="">
+	<title>Open Code Reviews - Request code reviews for your Project</title>
+	<meta name="description" content="Request code reviews for your Project">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<link href="{% static "css/bootstrap.min.css" %}" rel="stylesheet">
@@ -26,7 +26,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand topnav" href="#">Open Code Review</a>
+                <a class="navbar-brand topnav" href="/">Open Code Review</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -100,14 +100,25 @@
                 </div>
             </div>-->
             <div class="row">
-                <h1 class="section-heading">Open Reviews</h1>
-                <div class="col-md-6">
+                <h1 class="section-heading">Requested Reviews</h1>
+                <div class="row">
+                	<div class="col-md-6">
+                		<p>Add your GitHub repository</p>
+	                    <div class="input-group">
+	                        <input type="text" class="form-control input-lg" placeholder="lukasmartinelli/redis-pipe">
+	                        <span class="input-group-btn">
+	                            <button class="btn btn-default btn-lg" type="button">Request Review+</button>
+	                        </span>
+	                    </div>
+	                </div>
+				</div>
+                <div class="col-md-6 open-review">
                     <div class="row">
-                        <div class="col-md-2">
+                        <div class="col-xs-2">
                             <img src="https://avatars3.githubusercontent.com/u/1288339?v=3&s=460" class="img-responsive img-circle" style="margin-top: 20px"/>
                         </div>
-                        <div class="col-md-10">
-                            <h3><a href="#">lukasmartinelli/redis-pipe</a></h3>
+                        <div class="col-xs-10">
+                            <h3>lukasmartinelli/redis-pipe</h3>
                             <p>
                                 <span class="lead">Treat Redis Lists like Unix Pipes</span>
                                 <br/>
@@ -116,13 +127,13 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6 open-review">
                     <div class="row">
-                        <div class="col-md-2">
+                        <div class="col-xs-2">
                             <img src="https://avatars1.githubusercontent.com/u/32509?v=3&s=460" class="img-responsive img-circle" style="margin-top: 20px"/>
                         </div>
-                        <div class="col-md-10">
-                            <h3><a href="#">bevacqua/fuzzysearch</a></h3>
+                        <div class="col-xs-10">
+                            <h3>bevacqua/fuzzysearch</h3>
                             <p>
                                 <span class="lead">Tiny and blazing-fast fuzzy search in JavaScript</span>
                                 <br/>
@@ -131,13 +142,13 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6 open-review">
                     <div class="row">
-                        <div class="col-md-2">
+                        <div class="col-xs-2">
                             <img src="https://avatars3.githubusercontent.com/u/934293?v=3&s=460" class="img-responsive img-circle" style="margin-top: 20px"/>
                         </div>
-                        <div class="col-md-10">
-                            <h3><a href="#">openstf/stf</a></h3>
+                        <div class="col-xs-10">
+                            <h3>openstf/stf</h3>
                             <p>
                                 <span class="lead"> Control and manage Android devices from your browser.
 </span>
@@ -147,15 +158,16 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6">
+                <a style="color: inherit;" href="#">
+                <div class="col-md-6 open-review">
                     <div class="row">
-                        <div class="col-md-2">
+                        <div class="col-xs-2">
                             <img src="https://avatars2.githubusercontent.com/u/5117238?v=3&s=460" class="img-responsive img-circle" style="margin-top: 20px"/>
                         </div>
-                        <div class="col-md-10">
-                            <h3><a href="#">zombodb/zombodb</a></h3>
+                        <div class="col-xs-10">
+                            <h3>zombodb/zombodb</h3>
                             <p>
-                                <span class="lead">Postgres Extension that allows creating an index backed by Elasticsearch
+                                <span class="lead">Postgres Extension that allows creating an index
 </span>
                                 <br/>
                                 <small>Java • 354 stars</small>
@@ -163,13 +175,14 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6">
+                </a>
+                <div class="col-md-6 open-review">
                     <div class="row">
-                        <div class="col-md-2">
+                        <div class="col-xs-2">
                             <img src="https://avatars3.githubusercontent.com/u/11799296?v=3&s=460" class="img-responsive img-circle" style="margin-top: 20px"/>
                         </div>
-                        <div class="col-md-10">
-                            <h3><a href="#">iammert/MusicPlayerView</a></h3>
+                        <div class="col-xs-10">
+                            <h3>iammert/MusicPlayerView</h3>
                             <p>
                                 <span class="lead"> Android custom view and progress for music player</span>
                                 <br/>
@@ -178,13 +191,13 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6 open-review">
                     <div class="row">
-                        <div class="col-md-2">
+                        <div class="col-xs-2">
                             <img src="https://avatars2.githubusercontent.com/u/1789029?v=3&s=460" class="img-responsive img-circle" style="margin-top: 20px"/>
                         </div>
-                        <div class="col-md-10">
-                            <h3><a href="#">tessalt/echo-chamber-js</a></h3>
+                        <div class="col-xs-10">
+                            <h3>tessalt/echo-chamber-js</h3>
                             <p>
                                 <span class="lead"> Commenting without the comments</span>
                                 <br/>
@@ -198,40 +211,40 @@
                 <h1 class="section-heading">Reviewers</h1>
                 <div class="col-md-6">
                     <div class="row">
-                        <div class="col-md-2">
+                        <div class="col-xs-2">
                             <img src="https://avatars3.githubusercontent.com/u/1288339?v=3&s=460" class="img-responsive img-circle" style="margin-top: 20px"/>
                         </div>
-                        <div class="col-md-2">
+                        <div class="col-xs-2">
                             <img src="https://avatars0.githubusercontent.com/u/385047?v=3&s=460" class="img-responsive img-circle" style="margin-top: 20px"/>
                         </div>
-                        <div class="col-md-2">
+                        <div class="col-xs-2">
                             <img src="https://avatars2.githubusercontent.com/u/2108135?v=3&s=460" class="img-responsive img-circle" style="margin-top: 20px"/>
                         </div>
-                        <div class="col-md-2">
+                        <div class="col-xs-2">
                             <img src="https://avatars3.githubusercontent.com/u/76114?v=3&s=460" class="img-responsive img-circle" style="margin-top: 20px"/>
                         </div>
-                        <div class="col-md-2">
+                        <div class="col-xs-2">
                             <img src="https://avatars2.githubusercontent.com/u/8071008?v=3&s=460" class="img-responsive img-circle" style="margin-top: 20px"/>
                         </div>
-                        <div class="col-md-2">
+                        <div class="col-xs-2">
                             <img src="https://avatars0.githubusercontent.com/u/105168?v=3&s=460" class="img-responsive img-circle" style="margin-top: 20px"/>
                         </div>
-                        <div class="col-md-2">
+                        <div class="col-xs-2">
                             <img src="https://avatars2.githubusercontent.com/u/4898263?v=3&s=460" class="img-responsive img-circle" style="margin-top: 20px"/>
                         </div>
-                        <div class="col-md-2">
+                        <div class="col-xs-2">
                             <img src="https://avatars2.githubusercontent.com/u/8189834?v=3&s=460" class="img-responsive img-circle" style="margin-top: 20px"/>
                         </div>
-                        <div class="col-md-2">
+                        <div class="col-xs-2">
                             <img src="https://avatars2.githubusercontent.com/u/5657992?v=3&s=460" class="img-responsive img-circle" style="margin-top: 20px"/>
                         </div>
-                        <div class="col-md-2">
+                        <div class="col-xs-2">
                             <img src="https://avatars0.githubusercontent.com/u/6763278?v=3&s=460" class="img-responsive img-circle" style="margin-top: 20px"/>
                         </div>
-                        <div class="col-md-2">
+                        <div class="col-xs-2">
                             <img src="https://avatars0.githubusercontent.com/u/8794923?v=3&s=460" class="img-responsive img-circle" style="margin-top: 20px"/>
                         </div>
-                        <div class="col-md-2">
+                        <div class="col-xs-2">
                             <img src="https://avatars0.githubusercontent.com/u/9975255?v=3&s=460" class="img-responsive img-circle" style="margin-top: 20px"/>
                         </div>
                     </div>
