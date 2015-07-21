@@ -19,6 +19,7 @@ from django.contrib import admin
 urlpatterns = [
     url(r'^$', 'reviews.views.home'),
     url(r'^logout/$', 'reviews.views.logout'),
+    url(r'^reviews/$', 'reviews.views.browse', name='browse'),
     url(r'^admin/', include(admin.site.urls)),
     url('', include('social.apps.django_app.urls', namespace='social')),
 ]

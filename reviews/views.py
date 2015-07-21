@@ -8,3 +8,6 @@ def home(request):
 def logout(request):
     auth_logout(request)
     return redirect('/')
+
+def browse(request):
+    return render_to_response('browse.html')
