@@ -51,6 +51,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.security.SecurityMiddleware',
+    'social.apps.django_app.middleware.SocialAuthExceptionMiddleware',
 )
 
 AUTHENTICATION_BACKENDS = (
@@ -115,5 +116,6 @@ STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
 SOCIAL_AUTH_GITHUB_KEY = os.getenv('GITHUB_KEY')
 SOCIAL_AUTH_GITHUB_SECRET = os.getenv('GITHUB_SECRET')
-
+SOCIAL_AUTH_GITHUB_SCOPE = ['user:email']
+SOCIAL_AUTH_LOGIN_REDIRECT_URL = '/'
 SOCIAL_AUTH_URL_NAMESPACE = 'social'
