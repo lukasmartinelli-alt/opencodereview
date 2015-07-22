@@ -4,6 +4,8 @@ from django.contrib.auth.decorators import login_required
 
 from github3 import login
 
+from .forms import ReviewRequestForm
+
 def home(request):
 
     user = request.user
@@ -21,4 +23,21 @@ def browse(request):
     return render(request, 'browse.html')
 
 def new(request):
-    return render(request, 'new.html')
+    if request.method == 'POST':
+        form = ReviewRequestForm(request.POST)
+
+        if form.is_valid():
+            review_request = form.save(commit=False)
+            review_request.submitter = request.user
+            review_request.save()
+
+            return redirect('/')
+
+        return render(request, 'new.html', {
+            'form': form     
+        })
+    else:
+        form = ReviewRequestForm()
+        return render(request, 'new.html', {
+            'form': form     
+        })

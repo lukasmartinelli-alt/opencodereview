@@ -5,3 +5,4 @@ github3.py==0.9.4
 gunicorn==19.3.0
 whitenoise==2.0.2
 psycopg2==2.6
+django-widget-tweaks==1.4.1
