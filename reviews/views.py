@@ -11,3 +11,6 @@ def logout(request):
 
 def browse(request):
     return render_to_response('browse.html')
+
+def new(request):
+    return render_to_response('new.html')
