@@ -33,8 +33,7 @@
                 <label for="{{ form.info.id_for_label }}">
                     Provide some information for the reviewer
                 </label>
-                <div style="height: 200px;" id="epiceditor"></div>
-                {% render_field form.info class+="hidden" %}
+                {% render_field form.info class+="form-control" data-provide="markdown" %}
                 {% if form.info.errors %}
                   <span class="help-block">
                     {% for error in form.info.errors %}{{ error }}{% endfor %}
@@ -48,16 +47,4 @@
   </div>
 </div>
 
-<script src="//cdnjs.cloudflare.com/ajax/libs/epiceditor/0.2.2/js/epiceditor.min.js" type="text/javascript"></script>
-<script>
-    var opts = {
-        textarea: '{{ form.info.id_for_label }}',
-        theme: {
-            base: 'https://cdnjs.cloudflare.com/ajax/libs/epiceditor/0.2.2/themes/base/epiceditor.css',
-            editor: 'https://cdnjs.cloudflare.com/ajax/libs/epiceditor/0.2.2/themes/editor/epic-light.css',
-            preview: 'https://cdnjs.cloudflare.com/ajax/libs/epiceditor/0.2.2/themes/preview/github.css'
-        }
-    };
-    var editor = new EpicEditor(opts).load();
-</script>
 {% endblock %}

@@ -189,3 +189,7 @@ p.copyright {
 .btn, .input-lg {
     border-radius: 0px;
 }
+
+.md-editor>textarea, .md-editor>.md-preview {
+    padding: 10px;
+}

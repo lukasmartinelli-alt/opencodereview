@@ -1,3 +1,5 @@
+from concurrent.futures import ThreadPoolExecutor
+
 from django.shortcuts import render_to_response, redirect, render
 from django.contrib.auth import logout as auth_logout
 from django.contrib.auth.decorators import login_required
@@ -5,14 +7,32 @@ from django.contrib.auth.decorators import login_required
 from github3 import login
 
 from .forms import ReviewRequestForm
+from .models import ReviewRequest
 
-def home(request):
 
+def _authenticate_github_api(request):
     user = request.user
     if user and user.is_authenticated():
         auth = user.social_auth.get(provider='github')
-        gh = login(token=auth.access_token)
+        return login(token=auth.access_token)
 
+    return login(token=APP_AUTH_TOKEN)
+
+def home(request):
+    gh = _authenticate_github_api(request)
+    review_requests = ReviewRequest.objects.all()
+    repos = []
+
+    """
+    def repo_detail(repo):
+        full_repo = gh.repo(repo)
+        repos.append(full_repo) # Is only save because of GIL!
+
+    with ThreadPoolExecutor(max_workers=10) as thread_pool:
+        for review_request in review_requests:
+            thread_pool.submit(repo_detail, review_request.github_repo)
+        
+    """
     return render(request, 'home.html')
 
 def logout(request):
