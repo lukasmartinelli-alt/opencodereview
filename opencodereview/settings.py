@@ -13,7 +13,6 @@ https://docs.djangoproject.com/en/1.8/ref/settings/
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
 import json
-import dj_database_url
 
 SITE_DIR = os.path.dirname(os.path.abspath(__file__))
 BASE_DIR = os.path.dirname(SITE_DIR)
@@ -84,17 +83,16 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'opencodereview.wsgi.application'
 
-
-# Database
-# https://docs.djangoproject.com/en/1.8/ref/settings/#databases
-
-if 'VCAP_SERVICES' in os.environ:
-    vcap_services = json.loads(os.environ['VCAP_SERVICES'])
-    DATABASE_URL = vcap_services['postgresql-9.3'][0]['credentials']['uri']
-else:
-    DATABASE_URL = os.getenv('DATABASE_URL', 'postgres://localhost/opencodereview')
-
-DATABASES = {'default': dj_database_url.parse(DATABASE_URL)}
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': os.environ.get('DB_NAME', 'opencodereview'),
+        'USER': os.environ.get('DB_USER', 'opencodereview'),
+        'PASSWORD': os.environ.get('DB_PASSWORD', 'opencodereview'),
+        'HOST': os.environ.get('DB_HOST', 'localhost'),
+        'PORT': int(os.environ.get('DB_PORT', '5432')),
+    }
+}
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.8/topics/i18n/
