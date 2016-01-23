@@ -21,7 +21,7 @@
                   </span>
                 {% endif %}
             </div>
-             <div class="form-group {% if form.review_info.errors %}has-error{% endif %}">
+            <div class="form-group {% if form.review_info.errors %}has-error{% endif %}">
                 <label for="{{ form.review_info.id_for_label }}">
                     Provide some information for the reviewer
                 </label>
@@ -32,6 +32,12 @@
                   </span>
                 {% endif %}
             </div>
+            <div class="form-group">
+                <label for="{{ form.tags.id_for_label }}">
+                    Tag your project with the technologies and languages used
+                </label>
+                {% render_field form.tags class+="form-control magicsuggest" placeholder="Enter one or multiple tags" %}
+            </div>
             <button type="submit" class="btn btn-default btn-lg">Request Review+</button>
         </form>
       </div>
@@ -40,5 +46,8 @@
     </div>
   </div>
 </div>
+{% endblock %}
 
+{% block scripts %}
+<script src="{% static "js/request_review.js" %}" type="text/javascript"></script>
 {% endblock %}

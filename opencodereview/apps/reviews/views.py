@@ -47,6 +47,7 @@ def new(request):
             review_request = form.save(commit=False)
             review_request.submitter = request.user
 
+            import ipdb; ipdb.set_trace()
             repo_owner, repo_name = form.cleaned_data['github_repo'].split('/')
             review_request.repo_owner = repo_owner
             review_request.repo_name = repo_name

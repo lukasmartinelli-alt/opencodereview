@@ -7,4 +7,8 @@ class ReviewRequestForm(forms.ModelForm):
 
     class Meta:
         model = ReviewRequest
-        fields = ['review_info']
+        fields = ['review_info', 'tags']
+
+    def clean_tags(self):
+        data = self.data.getlist('tags[]')
+        return data
