@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.contrib.postgres.fields import ArrayField
 
 PENDING = 0
 REVIEWED = 1
@@ -11,10 +12,14 @@ STATUS_CHOICES = (
 
 class ReviewRequest(models.Model):
     submitter = models.ForeignKey(User)
-    github_repo = models.CharField(max_length=250)
-    info = models.TextField()
-    create_issue = models.BooleanField(default=False)
+    review_info = models.TextField()
     status = models.IntegerField(default=0, choices=STATUS_CHOICES)
+    tags = ArrayField(models.CharField(max_length=200), blank=True)
+
+    repo_owner = models.TextField()
+    repo_name = models.TextField()
+    repo_description = models.TextField()
+    repo_stars = models.IntegerField(default=0)
 
 
 class Review(models.Model):

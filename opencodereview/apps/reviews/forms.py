@@ -3,6 +3,8 @@ from .models import ReviewRequest
 
 
 class ReviewRequestForm(forms.ModelForm):
+    github_repo = forms.CharField()
+
     class Meta:
         model = ReviewRequest
-        fields = ['github_repo', 'info', 'create_issue']
+        fields = ['review_info']

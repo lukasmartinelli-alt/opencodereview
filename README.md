@@ -174,3 +174,12 @@ reviewers are interested it is still possible.
 - Review project **2h**
 - User detail **2h**
 - Review detail **2h**
+
+## Setup Project
+
+Create the database.
+
+```sql
+create user opencodereview with password 'opencodereview';
+create database opencodereview with owner opencodereview;
+```

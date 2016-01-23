@@ -21,22 +21,14 @@
                   </span>
                 {% endif %}
             </div>
-            <div class="checkbox {% if form.create_issue.errors %}has-error{% endif %}">
-                {{ form.create_issue.errors }}
-                <label>
-                    {{ form.create_issue }}
-                    Create issue for review
-                </label>
-             </div>
-             <br/>
-             <div class="form-group {% if form.info.errors %}has-error{% endif %}">
-                <label for="{{ form.info.id_for_label }}">
+             <div class="form-group {% if form.review_info.errors %}has-error{% endif %}">
+                <label for="{{ form.review_info.id_for_label }}">
                     Provide some information for the reviewer
                 </label>
-                {% render_field form.info class+="form-control" data-provide="markdown" %}
-                {% if form.info.errors %}
+                {% render_field form.review_info class+="form-control" data-provide="markdown" %}
+                {% if form.review_info.errors %}
                   <span class="help-block">
-                    {% for error in form.info.errors %}{{ error }}{% endfor %}
+                    {% for error in form.review_info.errors %}{{ error }}{% endfor %}
                   </span>
                 {% endif %}
             </div>
