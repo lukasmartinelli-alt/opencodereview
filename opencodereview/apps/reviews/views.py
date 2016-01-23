@@ -1,5 +1,6 @@
 from django.shortcuts import render_to_response, redirect, render
 from django.contrib.auth import logout as auth_logout
+from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
 from django.conf import settings
 
@@ -20,8 +21,10 @@ def _authenticate_github_api(request):
 
 def home(request):
     review_requests = ReviewRequest.objects.all()
+    reviewers = User.objects.all()
     return render(request, 'home.html', {
-        'requests': review_requests
+        'requests': review_requests,
+        'reviewers': reviewers
     })
 
 
