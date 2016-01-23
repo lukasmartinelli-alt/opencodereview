@@ -18,8 +18,12 @@ class ReviewRequest(models.Model):
 
     repo_owner = models.TextField()
     repo_name = models.TextField()
+    repo_avatar_url = models.URLField()
     repo_description = models.TextField()
     repo_stars = models.IntegerField(default=0)
+
+    def repo_full_name(self):
+        return '{}/{}'.format(self.repo_owner, self.repo_name)
 
 
 class Review(models.Model):

@@ -20,7 +20,9 @@ def _authenticate_github_api(request):
 
 def home(request):
     review_requests = ReviewRequest.objects.all()
-    return render(request, 'home.html')
+    return render(request, 'home.html', {
+        'requests': review_requests
+    })
 
 
 def logout(request):
@@ -29,14 +31,19 @@ def logout(request):
 
 
 def browse(request):
-    return render(request, 'browse.html')
+    review_requests = ReviewRequest.objects.all()
+    return render(request, 'browse.html', {
+        'requests': review_requests
+    })
 
 
-def update_review_request_from_github(gh, review):
-    repo = gh.repository(review.repo_owner, review.repo_name)
-    review.repo_description = repo.description
-    review.stars = repo.stargazers
-    return review
+def update_review_request_from_github(gh, request_review):
+    repo = gh.repository(request_review.repo_owner, request_review.repo_name)
+    submitter = gh.user(request_review.submitter.username)
+    request_review.repo_avatar_url = submitter.avatar_url
+    request_review.repo_description = repo.description
+    request_review.repo_stars = repo.stargazers
+    return request_review
 
 
 def new(request):
@@ -47,7 +54,6 @@ def new(request):
             review_request = form.save(commit=False)
             review_request.submitter = request.user
 
-            import ipdb; ipdb.set_trace()
             repo_owner, repo_name = form.cleaned_data['github_repo'].split('/')
             review_request.repo_owner = repo_owner
             review_request.repo_name = repo_name
